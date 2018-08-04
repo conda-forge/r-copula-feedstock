@@ -14,14 +14,16 @@ Summary: Classes (S4) of commonly used elliptical, Archimedean, extreme value an
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/r-copula-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/r-copula-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/r-copula-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/r-copula-feedstock)
-Windows: ![](https://cdn.rawgit.com/conda-forge/conda-smithy/90845bba35bec53edac7a16638aa4d77217a3713/conda_smithy/static/disabled.svg)
+[![Linux](https://img.shields.io/circleci/project/github/conda-forge/r-copula-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/r-copula-feedstock)
+[![OSX](https://img.shields.io/travis/conda-forge/r-copula-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/r-copula-feedstock)
+![Windows disabled](https://img.shields.io/badge/Windows-disabled-lightgrey.svg)
 
 Current release info
 ====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/r-copula/badges/version.svg)](https://anaconda.org/conda-forge/r-copula)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/r-copula/badges/downloads.svg)](https://anaconda.org/conda-forge/r-copula)
+
+| Name | Downloads | Version | Platforms |
+| --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-r--copula-green.svg)](https://anaconda.org/conda-forge/r-copula) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/r-copula.svg)](https://anaconda.org/conda-forge/r-copula) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/r-copula.svg)](https://anaconda.org/conda-forge/r-copula) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/r-copula.svg)](https://anaconda.org/conda-forge/r-copula) |
 
 Installing r-copula
 ===================
@@ -66,6 +68,7 @@ To manage the continuous integration and simplify feedstock maintenance
 Using the ``conda-forge.yml`` within this repository, it is possible to re-render all of
 this feedstock's supporting files (e.g. the CI configuration files) with ``conda smithy rerender``.
 
+For more information please check the [conda-forge documentation](https://conda-forge.org/docs/).
 
 Terminology
 ===========
