@@ -15,7 +15,8 @@ source:
   sha256: 8a2b6c704701cba68fbdc837ca73db1f3d3c4bfbbdb2e4dab4d6af0c65b9d056
 
 build:
-  number: 0
+  merge_build_host: True  # [win]
+  number: 1
   skip: true  # [win]
   rpaths:
     - lib/R/lib/
@@ -23,6 +24,12 @@ build:
 
 requirements:
   build:
+    - posix                # [win]
+    - {{ compiler('fortran') }}        # [unix]
+    - {{ compiler('m2w64_fortran') }}  # [win]
+    - {{ compiler('c') }}        # [unix]
+    - {{ compiler('m2w64_c') }}  # [win]
+  host:
     - r-base
     - r-adgoftest
     - r-matrix
@@ -34,10 +41,7 @@ requirements:
     - r-pcapp
     - r-pspline
     - r-stabledist >=0.6_4
-    - posix                # [win]
-    - {{native}}toolchain  # [win]
-    - gcc                  # [not win]
-    - openblas 0.2.19|0.2.19.*
+    - openblas
 
   run:
     - r-base
@@ -51,8 +55,7 @@ requirements:
     - r-pcapp
     - r-pspline
     - r-stabledist >=0.6_4
-    - openblas 0.2.19|0.2.19.*
-    - libgcc  # [not win]
+    - openblas
 
 test:
   commands:
