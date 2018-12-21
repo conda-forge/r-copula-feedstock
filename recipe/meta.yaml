@@ -22,7 +22,7 @@ build:
     - lib/
 
 requirements:
-  build:
+  host:
     - r-base
     - r-adgoftest
     - r-matrix
@@ -34,11 +34,11 @@ requirements:
     - r-pcapp
     - r-pspline
     - r-stabledist >=0.6_4
-    - posix                # [win]
-    - {{native}}toolchain  # [win]
-    - gcc                  # [not win]
     - openblas 0.2.19|0.2.19.*
-
+  build:
+    - posix                # [win]
+    - {{ compiler('c') }}  # [not win]
+    - {{ compiler('m2w64_c') }}  # [win]
   run:
     - r-base
     - r-adgoftest
