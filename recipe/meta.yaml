@@ -22,6 +22,10 @@ build:
     - lib/
 
 requirements:
+  build:
+    - posix                # [win]
+    - {{ compiler('c') }}  # [not win]
+    - {{ compiler('m2w64_c') }}  # [win]
   host:
     - r-base
     - r-adgoftest
@@ -35,10 +39,6 @@ requirements:
     - r-pspline
     - r-stabledist >=0.6_4
     - openblas 0.2.19|0.2.19.*
-  build:
-    - posix                # [win]
-    - {{ compiler('c') }}  # [not win]
-    - {{ compiler('m2w64_c') }}  # [win]
   run:
     - r-base
     - r-adgoftest
