@@ -27,8 +27,6 @@ requirements:
     - {{ compiler('c') }}  # [not win]
     - {{ compiler('m2w64_c') }}  # [win]
   host:
-    - libblas
-    - libcblas
     - r-base
     - r-adgoftest
     - r-matrix
@@ -52,7 +50,6 @@ requirements:
     - r-pcapp
     - r-pspline
     - r-stabledist >=0.6_4
-    - libgcc  # [not win]
 
 test:
   commands:
