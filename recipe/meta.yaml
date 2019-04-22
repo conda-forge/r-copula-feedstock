@@ -1,4 +1,4 @@
-{% set version = "0.999-19" %}
+{% set version = "0.999-19.1" %}
 
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
@@ -12,10 +12,10 @@ source:
   url:
     - https://cran.r-project.org/src/contrib/copula_{{ version }}.tar.gz
     - https://cran.r-project.org/src/contrib/Archive/copula/copula_{{ version }}.tar.gz
-  sha256: b4147e71b4a7fc412bfb643e1f994880ab6e1954e8fb37d1f0c5abee5cf9339a
+  sha256: 1919d728cda4bee14c1e34b3d8d5a9f770c89cce6473c8416f028970ba13692e
 
 build:
-  number: 1
+  number: 0
   skip: true  # [win]
   rpaths:
     - lib/R/lib/
