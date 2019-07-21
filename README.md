@@ -29,17 +29,31 @@ Current build status
         <table>
           <thead><tr><th>Variant</th><th>Status</th></tr></thead>
           <tbody><tr>
-              <td>linux</td>
+              <td>linux_r_base3.5.1</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=4208&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/r-copula-feedstock?branchName=master&jobName=linux&configuration=linux_" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/r-copula-feedstock?branchName=master&jobName=linux&configuration=linux_r_base3.5.1" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>osx</td>
+              <td>linux_r_base3.6</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=4208&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/r-copula-feedstock?branchName=master&jobName=osx&configuration=osx_" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/r-copula-feedstock?branchName=master&jobName=linux&configuration=linux_r_base3.6" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_r_base3.5.1</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=4208&branchName=master">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/r-copula-feedstock?branchName=master&jobName=osx&configuration=osx_r_base3.5.1" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_r_base3.6</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=4208&branchName=master">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/r-copula-feedstock?branchName=master&jobName=osx&configuration=osx_r_base3.6" alt="variant">
                 </a>
               </td>
             </tr>
@@ -150,6 +164,7 @@ Feedstock Maintainers
 =====================
 
 * [@bgruening](https://github.com/bgruening/)
+* [@conda-forge/r](https://github.com/conda-forge/r/)
 * [@dpryan79](https://github.com/dpryan79/)
 * [@johanneskoester](https://github.com/johanneskoester/)
 

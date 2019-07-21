@@ -15,7 +15,7 @@ source:
   sha256: 1919d728cda4bee14c1e34b3d8d5a9f770c89cce6473c8416f028970ba13692e
 
 build:
-  number: 0
+  number: 1
   skip: true  # [win]
   rpaths:
     - lib/R/lib/
@@ -64,9 +64,8 @@ about:
     dependence measures, perspective and contour plots.  Fitting copula models including
     variance estimates.
   license_family: GPL3
+  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3'
 
 extra:
   recipe-maintainers:
-    - dpryan79
-    - johanneskoester
-    - bgruening
+    - conda-forge/r
