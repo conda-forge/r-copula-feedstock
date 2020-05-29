@@ -1,4 +1,4 @@
-{% set version = "0.999-20" %}
+{% set version = "1.0-0" %}
 
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
@@ -12,10 +12,10 @@ source:
   url:
     - https://cran.r-project.org/src/contrib/copula_{{ version }}.tar.gz
     - https://cran.r-project.org/src/contrib/Archive/copula/copula_{{ version }}.tar.gz
-  sha256: 7d3d47bce2dacb05b94a772f84dbf3d83c99ac2ac11e5f1b4b03d50d9d5c0fb0
+  sha256: 51a3cc4a7c6926aa0cfe3df60615966d5e558ef84dc045beb29c83d7232e62c2
 
 build:
-  number: 1
+  number: 0
   skip: true  # [win]
   rpaths:
     - lib/R/lib/
@@ -59,12 +59,9 @@ test:
 about:
   home: http://copula.r-forge.r-project.org/
   license: GPL (>= 3) | file LICENCE
-  summary: Classes (S4) of commonly used elliptical, Archimedean, extreme value and some more
-    copula families.  Methods for density, distribution, random number generation, bivariate
-    dependence measures, perspective and contour plots.  Fitting copula models including
-    variance estimates.
+  summary: Classes (S4) of commonly used elliptical, Archimedean, extreme value and some more copula families.  Methods for density, distribution, random number generation, bivariate dependence measures, perspective and contour plots.  Fitting copula models including variance estimates.
   license_family: GPL3
-  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3'
+  license_file: {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3
 
 extra:
   recipe-maintainers:
