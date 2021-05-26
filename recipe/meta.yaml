@@ -1,5 +1,4 @@
 {% set version = "1.0-1" %}
-
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -8,24 +7,30 @@ package:
   version: {{ version|replace("-", "_") }}
 
 source:
-  fn: copula_{{ version }}.tar.gz
   url:
-    - https://cran.r-project.org/src/contrib/copula_{{ version }}.tar.gz
-    - https://cran.r-project.org/src/contrib/Archive/copula/copula_{{ version }}.tar.gz
+    - {{ cran_mirror }}/src/contrib/copula_{{ version }}.tar.gz
+    - {{ cran_mirror }}/src/contrib/Archive/copula/copula_{{ version }}.tar.gz
   sha256: d09b2ccffc7379e48b00952aa6b282baf502feebaf55cc44e93f881d7b909742
 
 build:
+  merge_build_host: True  # [win]
   number: 0
-  skip: true  # [win]
   rpaths:
     - lib/R/lib/
     - lib/
 
 requirements:
   build:
-    - posix                # [win]
-    - {{ compiler('c') }}  # [not win]
-    - {{ compiler('m2w64_c') }}  # [win]
+    - {{ compiler('c') }}              # [not win]
+    - {{ compiler('m2w64_c') }}        # [win]
+    - {{ compiler('fortran') }}        # [not win]
+    - {{ compiler('m2w64_fortran') }}  # [win]
+    - {{ posix }}filesystem        # [win]
+    - {{ posix }}make
+    - {{ posix }}sed               # [win]
+    - {{ posix }}coreutils         # [win]
+    - {{ posix }}zip               # [win]
+    - cross-r-base {{ r_base }}    # [build_platform != target_platform]
   host:
     - r-base
     - r-adgoftest
@@ -40,6 +45,7 @@ requirements:
     - r-stabledist >=0.6_4
   run:
     - r-base
+    - {{ native }}gcc-libs         # [win]
     - r-adgoftest
     - r-matrix
     - r-colorspace
@@ -53,15 +59,16 @@ requirements:
 
 test:
   commands:
-    - $R -e "library('copula')"  # [not win]
+    - $R -e "library('copula')"           # [not win]
     - "\"%R%\" -e \"library('copula')\""  # [win]
 
 about:
   home: http://copula.r-forge.r-project.org/
-  license: GPL (>= 3) | file LICENCE
+  license: GPL-3.0-or-later
   summary: Classes (S4) of commonly used elliptical, Archimedean, extreme value and some more copula families.  Methods for density, distribution, random number generation, bivariate dependence measures, perspective and contour plots.  Fitting copula models including variance estimates.
   license_family: GPL3
-  license_file: {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3
+  license_file:
+    - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3
 
 extra:
   recipe-maintainers:
