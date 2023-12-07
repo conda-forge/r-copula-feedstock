@@ -3,6 +3,7 @@ About r-copula-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-copula-feedstock/blob/main/LICENSE.txt)
 
+
 About r-copula
 --------------
 
@@ -11,6 +12,7 @@ Home: http://copula.r-forge.r-project.org/
 Package license: GPL-3.0-or-later
 
 Summary: Classes (S4) of commonly used elliptical, Archimedean, extreme value and some more copula families.  Methods for density, distribution, random number generation, bivariate dependence measures, perspective and contour plots.  Fitting copula models including variance estimates.
+
 About r-copula
 --------------
 
@@ -153,7 +155,7 @@ available continuous integration services. Thanks to the awesome service provide
 [CircleCI](https://circleci.com/), [AppVeyor](https://www.appveyor.com/),
 [Drone](https://cloud.drone.io/welcome), and [TravisCI](https://travis-ci.com/)
 it is possible to build and upload installable packages to the
-[conda-forge](https://anaconda.org/conda-forge) [Anaconda-Cloud](https://anaconda.org/)
+[conda-forge](https://anaconda.org/conda-forge) [anaconda.org](https://anaconda.org/)
 channel for Linux, Windows and OSX respectively.
 
 To manage the continuous integration and simplify feedstock maintenance
