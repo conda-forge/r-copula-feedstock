@@ -19,25 +19,25 @@ build:
 
 requirements:
   build:
+    - cross-r-base {{ r_base }}        # [build_platform != target_platform]
     - {{ compiler('c') }}              # [not win]
     - {{ stdlib("c") }}                # [not win]
     - {{ compiler('m2w64_c') }}        # [win]
     - {{ stdlib("m2w64_c") }}          # [win]
     - {{ compiler('fortran') }}        # [not win]
     - {{ compiler('m2w64_fortran') }}  # [win]
-    - {{ posix }}filesystem        # [win]
+    - {{ posix }}filesystem            # [win]
     - {{ posix }}make
-    - {{ posix }}sed               # [win]
-    - {{ posix }}coreutils         # [win]
-    - {{ posix }}zip               # [win]
-    - cross-r-base {{ r_base }}    # [build_platform != target_platform]
+    - {{ posix }}sed                   # [win]
+    - {{ posix }}coreutils             # [win]
+    - {{ posix }}zip                   # [win]
   host:
     - r-base
     - r-adgoftest
-    - r-matrix
     - r-colorspace
     - r-gsl
     - r-lattice
+    - r-matrix >=1.5_0
     - r-mvtnorm
     - r-numderiv
     - r-pcapp
@@ -46,10 +46,10 @@ requirements:
   run:
     - r-base
     - r-adgoftest
-    - r-matrix
     - r-colorspace
     - r-gsl
     - r-lattice
+    - r-matrix >=1.5_0
     - r-mvtnorm
     - r-numderiv
     - r-pcapp
