@@ -1,4 +1,4 @@
-{% set version = '1.1-4' %}
+{% set version = "1.1-5" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,10 +9,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/copula_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/copula/copula_{{ version }}.tar.gz
-  sha256: f4d78b7f4860797620dfe15c62cbeeb319b2dbbacab75062652d467c4ef6504f
+  sha256: dd046fac4287c1f05eaae84b091240ea1e7bcedd577334fcf1734a129efe4910
 
 build:
-  number: 1
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
