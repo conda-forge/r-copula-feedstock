@@ -11,7 +11,7 @@ Home: http://copula.r-forge.r-project.org/
 
 Package license: GPL-3.0-or-later
 
-Summary: Classes (S4) of commonly used elliptical, Archimedean, extreme value and some more copula families.  Methods for density, distribution, random number generation, bivariate dependence measures, perspective and contour plots.  Fitting copula models including variance estimates.
+Summary: Classes (S4) of commonly used elliptical, Archimedean, extreme-value and other copula families, as well as their rotations, mixtures and asymmetrizations. Nested Archimedean copulas, related tools and special functions. Methods for density, distribution, random number generation, bivariate dependence measures, Rosenblatt transform, Kendall distribution function, perspective and contour plots. Fitting of copula models with potentially partly fixed parameters, including standard errors. Serial independence tests, copula specification tests (independence, exchangeability, radial symmetry, extreme-value dependence, goodness-of-fit) and model selection based on cross-validation. Empirical copula, smoothed versions, and non-parametric estimators of the Pickands dependence function.
 
 About r-copula
 --------------
@@ -20,7 +20,7 @@ Home: http://copula.r-forge.r-project.org/
 
 Package license: GPL-3.0-or-later
 
-Summary: Classes (S4) of commonly used elliptical, Archimedean, extreme value and some more copula families.  Methods for density, distribution, random number generation, bivariate dependence measures, perspective and contour plots.  Fitting copula models including variance estimates.
+Summary: Classes (S4) of commonly used elliptical, Archimedean, extreme-value and other copula families, as well as their rotations, mixtures and asymmetrizations. Nested Archimedean copulas, related tools and special functions. Methods for density, distribution, random number generation, bivariate dependence measures, Rosenblatt transform, Kendall distribution function, perspective and contour plots. Fitting of copula models with potentially partly fixed parameters, including standard errors. Serial independence tests, copula specification tests (independence, exchangeability, radial symmetry, extreme-value dependence, goodness-of-fit) and model selection based on cross-validation. Empirical copula, smoothed versions, and non-parametric estimators of the Pickands dependence function.
 
 Current build status
 ====================
